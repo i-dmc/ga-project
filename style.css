@@ -1,17 +1,24 @@
-* {
-    border: 1px solid pink;
-    box-sizing: content-box;
-    margin: 0;
-}
-
 body {
     font-family: 'Lato', sans-serif;
     margin: 50px;
-    background-color: pink;
+    background-color: orange;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+        margin: 0px;
+    }
 }
 
 
 /* code regarding top navigation bar */
+
+h1 {
+    font-size: 32px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,7 +45,12 @@ nav {
 .image {
     position: relative;
     height: 900px;
+}
 
+@media only screen and (max-width: 600px) {
+    .image {
+        height: 450px;
+    }
 }
 
 .photo {
@@ -50,6 +62,14 @@ nav {
     width: 570px;
     height: 520px;
     animation: animate-image 5s ease-in-out infinite alternate;
+}
+
+@media only screen and (max-width: 600px) {
+    .photo {
+        width: 270px;
+        height: 220px;
+        left: 50%;
+    }
 }
 
 .blob {
@@ -64,6 +84,14 @@ nav {
     z-index: -1;
     animation: animate-image 7s ease-in-out infinite alternate;
     animation-delay: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    .blob {
+        width: 270px;
+        height: 220px;
+        left: 50%;
+    }
 }
 
 @keyframes animate-image {
@@ -102,14 +130,25 @@ nav {
     height: 900px;
 }
 
+
+
 .intro {
     position: absolute;
     top: 45%;
-    left: 75%;
+    left: 68%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 600px;
+    max-width: 325px;
     /* adjust to your needs */
+}
+
+@media only screen and (max-width: 600px) {
+    .intro {
+        width: 300px;
+        height: 220px;
+        margin-top: 50px;
+        left: 50%;
+    }
 }
 
 .intro h2 {
@@ -135,6 +174,12 @@ h2 {
     font-size: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+    .text {
+        font-size: 16px;
+    }
+}
+
 /* code regarding about me section */
 
 .about {
@@ -142,23 +187,60 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 100px 0 300px 0;
+    margin: 100px 100px 300px 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 200px 150px 200px;
+        padding-right: 100px;
+    }
 }
 
 .tldr-section {
-    padding-right: 20px;
     border-right: 1px solid black;
+    margin-left: 100px;
+    padding-right: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+    .tldr-section {
+        border-right: none;
+        border-bottom: 1px solid black;
+        padding-right: 0px;
+    }
 }
 
 .short-form {
     font-size: 50px;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .short-form {
+        font-size: 30px;
+        width: 300px;
+    }
 }
 
 .long-form {
-    padding-left: 20px;
+    padding-left: 100px;
     font-size: 22px;
+    margin-left: 50px;
 }
 
+@media only screen and (max-width: 600px) {
+    .long-form {
+        font-size: 16px;
+        width: 300px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
+}
 
 h3 {
     font-size: 58px;
@@ -167,16 +249,35 @@ h3 {
     padding-top: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+    .h3 {
+        font-size: 58px;
+        text-align: center;
+        padding-bottom: 150px;
+        padding-top: 20px;
+    }
+}
+
 .project-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.command {
+.details {
+    margin-left: 50px;
     display: flex;
-    align-items: center;
-    padding-top: 80px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .project-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .type {
@@ -185,6 +286,17 @@ h3 {
     font-size: 20px;
 }
 
+.command {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    .command {
+        padding-top: 20px;
+    }
+}
 
 .preview {
     border-radius: 20px;
@@ -196,15 +308,17 @@ h3 {
     transition: filter 0.3s ease-in-out;
 }
 
-.preview:hover {
-    filter: grayscale(0%);
+@media only screen and (max-width: 600px) {
+    .preview {
+        height: 200px;
+        width: 450px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 }
 
-.details {
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.preview:hover {
+    filter: grayscale(0%);
 }
 
 .material-symbols-outlined {
@@ -219,6 +333,17 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 50px 0 0 0;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .project-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .preview-2 {
@@ -231,6 +356,15 @@ h3 {
     transition: filter 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+    .preview-2 {
+        height: 200px;
+        width: 450px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
 .preview-2:hover {
     filter: grayscale(0%);
 }
@@ -239,11 +373,16 @@ h4 {
     padding: 150px 0 20px 0;
     font-size: 58px;
     margin-left: 20px;
+}
 
+@media only screen and (max-width: 600px) {
+    h4 {
+        font-size: 38px;
+    }
 }
 
 footer {
-    padding: 0 0 100px 0px;
+    padding: 20px 0 100px 0px;
 }
 
 .footer-list {
@@ -251,6 +390,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 500px;
+    padding-left: 15px;
 }
 
 .links {
@@ -258,11 +398,18 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 10px 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    ;
     font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .links {
+        margin-right: 120px;
+        font-size: 16px;
+        width: 200px;
+    }
 }
 
 .links:last-child {
@@ -284,6 +431,7 @@ footer {
     position: block;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .blob-2 {
@@ -300,6 +448,12 @@ footer {
     animation-delay: 1s;
 }
 
+@media only screen and (max-width: 600px) {
+    .blob-2 {
+        right: 50px;
+    }
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -308,8 +462,11 @@ a {
 p {
     padding-top: 20px;
     font-size: 14px;
+    max-width: 500px;
 }
 
-.summary {
-    font-size: 12px;
+@media only screen and (max-width: 600px) {
+    p {
+        max-width: 400px;
+    }
 }
