@@ -1,3 +1,255 @@
 body {
-    background-color: blue;
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+
+}
+
+.top-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.right-nav {
+    padding: 0 40px 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    position: relative;
+    height: 900px;
+}
+
+.photo {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    width: 570px;
+    height: 520px;
+    animation: animate-image 5s ease-in-out infinite alternate;
+}
+
+.blob {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 570px;
+    height: 520px;
+    border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    background-color: #C2E5D3;
+    z-index: -1;
+    animation: animate-image 7s ease-in-out infinite alternate;
+    animation-delay: 1s;
+}
+
+@keyframes animate-image {
+    0% {
+        border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    }
+
+    50% {
+        border-radius: 70% 30% 30% 70% / 47% 70% 30% 53%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    }
+}
+
+@keyframes animate-blob {
+    0% {
+        border-radius: 90% 50% 20% 60% / 47% 70% 30% 53%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        border-radius: 30% 50% 50% 30% / 53% 30% 60% 47%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        border-radius: 40% 30% 30% 20% / 47% 70% 30% 53%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.banner {
+    position: relative;
+    height: 900px;
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    /* adjust to your needs */
+}
+
+.intro h2 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 62px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.intro-text {
+    display: flex;
+    align-items: center;
+
+}
+
+.text {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 400px 0;
+}
+
+.tldr-section {
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+
+.short-form {
+    font-size: 50px;
+}
+
+.long-form {
+    padding-left: 20px;
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 58px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.project-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.command {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.type {
+    padding: 20px 0 10px 0;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+.preview {
+    height: 450px;
+    width: 50%;
+    background-image: url("/Users/iva/ga-project/images/thumbnail_Screen Shot 2023-04-16 at 1.53.04 pm.jpg");
+    background-size: cover;
+}
+
+.details {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+    padding-left: 10px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.project-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.preview-2 {
+    height: 450px;
+    width: 50%;
+    background-image: url("/Users/iva/ga-project/images/Screen Shot 2023-04-16 at 2.49.51 pm.png");
+    background-size: cover;
+}
+
+h4 {
+    padding: 200px 0 20px 0;
+    font-size: 58px;
+    margin: 25px;
+}
+
+footer {
+    padding: 0 0 100px 0px;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    ;
+    font-size: 24px;
+}
+
+.links:last-child {
+    border-top: none;
+}
+
+.links:first-child {
+    border-bottom: none;
+}
+
+.left-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.right-footer {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
 }
