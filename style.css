@@ -1,19 +1,19 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-color: pink;
+    background-color: #ffc0cb;
     padding: 50px;
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        background-color: lightblue;
+        background-color: rgb(173, 216, 230);
     }
 }
 
 /* code regarding top navigation bar */
 
 h1 {
-    font-size: 32px;
+    font-size: 38px;
 }
 
 nav {
@@ -38,6 +38,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
 }
 
 .right-nav:hover {
@@ -84,14 +85,17 @@ nav {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 70px;
-    right: 10px;
-    width: 100px;
+    top: 120px;
+    left: 400px;
+    width: 120px;
+    height: 120px;
     background-color: #C2E5D3;
-    border-radius: 20px;
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
+
 }
 
 .dropdown {
@@ -178,7 +182,7 @@ nav {
     width: 570px;
     height: 520px;
     border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
-    background-color: #C2E5D3;
+    background-color: rgb(194, 229, 211);
     z-index: -1;
     animation: animate-image 7s ease-in-out infinite alternate;
     animation-delay: 1s;
@@ -310,7 +314,7 @@ h2 {
 }
 
 .tldr-section {
-    border-right: 1px solid black;
+    border-right: 1px solid rgb(0, 0, 0);
     padding-right: 50px;
 }
 
@@ -318,7 +322,7 @@ h2 {
     .tldr-section {
         padding: 100px 0 0 0;
         border-right: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(0, 0, 0);
     }
 }
 
@@ -524,8 +528,8 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
     font-size: 24px;
     padding: 10px 0 10px 0;
 }

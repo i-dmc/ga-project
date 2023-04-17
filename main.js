@@ -5,7 +5,7 @@ const dropdownMenu = document.querySelector('.dropdown-menu');
 
 burgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    dropdownMenu.classList.toggle('show-menu'); // toggle the show-menu class
+    dropdownMenu.classList.toggle('show-menu');
 });
 
 document.addEventListener('click', (event) => {
