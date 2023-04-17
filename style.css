@@ -1,16 +1,14 @@
 body {
     font-family: 'Lato', sans-serif;
-    margin: 50px;
     background-color: pink;
+    padding: 50px;
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        margin: auto;
         background-color: lightblue;
     }
 }
-
 
 /* code regarding top navigation bar */
 
@@ -22,7 +20,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px 20px 40px;
 
 }
 
@@ -30,13 +27,39 @@ nav {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .top-nav {
+        gap: 10px;
+    }
 }
 
 .right-nav {
-    padding: 0 40px 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav .top-nav {
+        display: block;
+    }
 }
 
 /* code regarding main banner */
@@ -46,11 +69,6 @@ nav {
     height: 900px;
 }
 
-@media only screen and (max-width: 600px) {
-    .image {
-        height: 450px;
-    }
-}
 
 .photo {
     position: absolute;
@@ -126,40 +144,47 @@ nav {
 
 .banner {
     position: relative;
-    height: 900px;
+    height: 100vh;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .banner {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 .intro {
     position: absolute;
     top: 45%;
     left: 68%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 325px;
     /* adjust to your needs */
 }
 
 @media only screen and (max-width: 600px) {
     .intro {
-        width: 300px;
-        height: 220px;
-        margin-top: 50px;
-        left: 50%;
+        width: 100%;
+        text-align: center;
+        padding-top: 90%;
     }
 }
-
-.intro h2 {
-    margin-bottom: 10px;
-}
-
 
 h2 {
     font-size: 62px;
     display: flex;
-    justify-content: flex-start;
-    padding: 0;
+    margin: 0;
+    padding: 20px 0 20px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 42px;
+        width: auto;
+    }
 }
 
 .intro-text {
@@ -169,7 +194,6 @@ h2 {
 }
 
 .text {
-    padding-right: 10px;
     font-size: 20px;
 }
 
@@ -180,76 +204,68 @@ h2 {
 }
 
 /* code regarding about me section */
+
 .about {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 50px;
     align-items: center;
-    margin: 100px 100px 300px 100px;
+    margin: 0;
+    padding: 0 400px 0 400px;
 }
 
 @media only screen and (max-width: 600px) {
     .about {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        margin: 50px 200px 150px 200px;
-        padding-right: 100px;
+        padding: 0;
+        gap: 50px;
     }
 }
 
-
-
 .tldr-section {
     border-right: 1px solid black;
-    margin-left: 150px;
-    padding-right: 100px;
-    width: 800px;
+    padding-right: 50px;
 }
 
 @media only screen and (max-width: 600px) {
     .tldr-section {
+        padding: 100px 0 0 0;
         border-right: none;
         border-bottom: 1px solid black;
-        padding-right: 0px;
-        margin-left: 100px;
-        width: auto;
     }
 }
 
 .short-form {
     font-size: 50px;
-    padding-top: 0;
 }
 
 @media only screen and (max-width: 600px) {
     .short-form {
         font-size: 30px;
-        width: 300px;
+        padding-bottom: 30px;
     }
 }
 
 .long-form {
-    padding-left: 100px;
     font-size: 22px;
-    margin-left: 50px;
 }
 
 @media only screen and (max-width: 600px) {
     .long-form {
         font-size: 16px;
-        width: 300px;
-        padding-right: 50px;
-        padding-top: 20px;
     }
 }
+
+/* code regarding about project 1 */
 
 h3 {
     font-size: 58px;
     text-align: center;
-    padding-bottom: 150px;
-    padding-top: 100px;
+    padding: 100px 0 120px 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -267,14 +283,6 @@ h3 {
     justify-content: space-between;
 }
 
-
-.details {
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 @media only screen and (max-width: 600px) {
     .project-1 {
         display: flex;
@@ -284,22 +292,39 @@ h3 {
     }
 }
 
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .details {
+        width: 100%;
+    }
+}
+
 .type {
-    padding: 20px 0 10px 0;
     font-style: italic;
     font-size: 20px;
+    padding: 20px 0 0 0;
 }
 
 .command {
     display: flex;
     align-items: center;
-    padding-top: 80px;
 }
 
 @media only screen and (max-width: 600px) {
     .command {
-        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
     }
+}
+
+.material-symbols-outlined {
+    padding: 0 0 0 10px;
 }
 
 .preview {
@@ -314,9 +339,9 @@ h3 {
 
 @media only screen and (max-width: 600px) {
     .preview {
-        height: 200px;
-        width: 450px;
-        margin-top: 20px;
+        height: 175px;
+        width: 100%;
+        padding-top: 20px;
     }
 }
 
@@ -324,28 +349,25 @@ h3 {
     filter: grayscale(0%);
 }
 
-.material-symbols-outlined {
-    padding-left: 10px;
-}
-
 .title {
     font-size: 40px;
 }
 
+/* code regarding about project 2 */
 
 .project-2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 50px 0 0 0;
-    margin-left: 0;
+    padding: 40px 0 0 0;
 }
 
 @media only screen and (max-width: 600px) {
     .project-2 {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -361,10 +383,9 @@ h3 {
 
 @media only screen and (max-width: 600px) {
     .preview-2 {
-        height: 200px;
-        width: 450px;
-        margin-left: 25px;
-        margin-top: 20px;
+        height: 175px;
+        width: 100%;
+        padding-top: 20px;
     }
 }
 
@@ -372,10 +393,17 @@ h3 {
     filter: grayscale(0%);
 }
 
+.title-2 {
+    font-size: 40px;
+    padding: 40px 0 0 0;
+}
+
+/* code regarding footer */
+
 h4 {
     padding: 150px 0 20px 0;
     font-size: 58px;
-    margin-left: 20px;
+    margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -384,16 +412,15 @@ h4 {
     }
 }
 
-footer {
-    padding: 20px 0 100px 0px;
-}
+footer {}
 
 .footer-list {
     list-style: none;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
     width: 500px;
-    padding-left: 15px;
 }
 
 .links {
@@ -401,15 +428,14 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 10px 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     font-size: 24px;
+    padding: 10px 0 10px 0;
 }
 
 @media only screen and (max-width: 600px) {
     .links {
-        margin-right: 120px;
         font-size: 16px;
         width: 200px;
     }
@@ -431,11 +457,19 @@ footer {
 }
 
 .right-footer {
-    position: block;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
 }
+
+@media only screen and (max-width: 600px) {
+    .right-footer {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
+
 
 .blob-2 {
     position: relative;
@@ -453,7 +487,10 @@ footer {
 
 @media only screen and (max-width: 600px) {
     .blob-2 {
-        right: 50px;
+        left: 40px;
+        top: 70px;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -462,8 +499,13 @@ a {
     color: black;
 }
 
+@media only screen and (max-width: 600px) {
+    a {
+        width: 100px;
+    }
+}
+
 p {
-    padding-top: 20px;
     font-size: 14px;
     max-width: 500px;
 }
