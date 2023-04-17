@@ -1,14 +1,13 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 50px;
-    background-color: orange;
-
+    background-color: pink;
 }
 
 @media only screen and (max-width: 600px) {
     body {
+        margin: auto;
         background-color: lightblue;
-        margin: 0px;
     }
 }
 
@@ -181,13 +180,12 @@ h2 {
 }
 
 /* code regarding about me section */
-
 .about {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 100px 100px 300px 200px;
+    margin: 100px 100px 300px 100px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -201,10 +199,13 @@ h2 {
     }
 }
 
+
+
 .tldr-section {
     border-right: 1px solid black;
-    margin-left: 100px;
-    padding-right: 70px;
+    margin-left: 150px;
+    padding-right: 100px;
+    width: 800px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -212,6 +213,8 @@ h2 {
         border-right: none;
         border-bottom: 1px solid black;
         padding-right: 0px;
+        margin-left: 100px;
+        width: auto;
     }
 }
 
@@ -264,6 +267,7 @@ h3 {
     justify-content: space-between;
 }
 
+
 .details {
     margin-left: 50px;
     display: flex;
@@ -312,7 +316,6 @@ h3 {
     .preview {
         height: 200px;
         width: 450px;
-        margin: 0 auto;
         margin-top: 20px;
     }
 }
@@ -329,6 +332,7 @@ h3 {
     font-size: 40px;
 }
 
+
 .project-2 {
     display: flex;
     flex-direction: row;
@@ -342,7 +346,6 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
     }
 }
 
@@ -360,7 +363,7 @@ h3 {
     .preview-2 {
         height: 200px;
         width: 450px;
-        margin: 0 auto;
+        margin-left: 25px;
         margin-top: 20px;
     }
 }
