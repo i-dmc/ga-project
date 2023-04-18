@@ -1,4 +1,3 @@
-
 const burgerMenu = document.querySelector('.burger-menu');
 const navLinks = document.querySelector('nav ul');
 const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -14,8 +13,9 @@ document.addEventListener('click', (event) => {
     const isClickInsideNav = event.target.closest('nav') !== null;
     const isClickInsideDropdown = event.target.closest('.dropdown-menu') !== null;
     if (!isClickInsideNav && !isClickInsideDropdown) {
-        navLinks.classList.toggle('active');
-        dropdownMenu.classList.toggle('show-menu');
-        hamburgerMenuIcon.classList.toggle('hide-burger');
+        navLinks.classList.remove('active');
+        dropdownMenu.classList.remove('show-menu');
+        hamburgerMenuIcon.classList.remove('hide-burger');
     }
 });
+
