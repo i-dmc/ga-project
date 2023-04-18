@@ -90,6 +90,10 @@ nav {
     }
 }
 
+.hide-burger {
+    display: none;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
