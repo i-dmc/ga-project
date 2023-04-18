@@ -97,7 +97,7 @@ nav {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 110px;
+    top: 60px;
     width: 120px;
     height: 120px;
     background-color: rgba(69, 66, 67, 0.5);
