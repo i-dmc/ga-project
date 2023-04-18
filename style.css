@@ -96,21 +96,21 @@ nav {
 
 .dropdown-menu {
     display: none;
+}
+
+#dropdown-menu.show-menu {
+    display: block;
     position: absolute;
-    right: 0;
-    transform: translate(0%, -50%);
     top: 110px;
+    right: 0;
     width: 120px;
     height: 120px;
     background-color: rgba(69, 66, 67, 0.5);
     list-style: none;
     font-size: 16px;
     margin: 0;
+    transform: translate(0, -50%);
     border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
-}
-
-#dropdown-menu.show-menu {
-    display: block;
 }
 
 .dropdown {
