@@ -1,3 +1,4 @@
+const topNav = document.querySelector('.top-nav');
 const burgerMenu = document.querySelector('.burger-menu');
 const navLinks = document.querySelector('nav ul');
 const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -18,4 +19,5 @@ document.addEventListener('click', (event) => {
         hamburgerMenuIcon.classList.remove('hide-burger');
     }
 });
+
 
