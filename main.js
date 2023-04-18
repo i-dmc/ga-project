@@ -14,7 +14,8 @@ document.addEventListener('click', (event) => {
     const isClickInsideNav = event.target.closest('nav') !== null;
     const isClickInsideDropdown = event.target.closest('.dropdown-menu') !== null;
     if (!isClickInsideNav && !isClickInsideDropdown) {
-        navLinks.classList.remove('active');
-        dropdownMenu.classList.remove('show-menu');
+        navLinks.classList.toggle('active');
+        dropdownMenu.classList.toggle('show-menu');
+        hamburgerMenuIcon.classList.toggle('hide-burger');
     }
 });
