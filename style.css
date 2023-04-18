@@ -103,7 +103,7 @@ nav {
     background-color: rgba(69, 66, 67, 0.5);
     list-style: none;
     font-size: 16px;
-    margin-right: 0;
+    margin-right: 0px;
     transform: translate(0, -50%);
     z-index: +3;
     border-radius: 30% 70% 70% 30% / 53% 30% 70% 47%;
@@ -632,14 +632,6 @@ h4 {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    ;
-}
-
-@media only screen and (max-width: 600px) {
-    a {
-        width: 50px;
-        font-size: 16px;
-    }
 }
 
 .text {
