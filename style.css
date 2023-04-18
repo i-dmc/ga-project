@@ -96,7 +96,6 @@ nav {
 
 .dropdown-menu {
     display: none;
-    position: absolute;
     top: 110px;
     left: 400px;
     width: 120px;
