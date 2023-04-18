@@ -634,6 +634,12 @@ a {
     color: rgb(255, 255, 255);
 }
 
+@media only screen and (max-width: 600px) {
+    a {
+        width: 100px;
+    }
+}
+
 .text {
     position: absolute;
     right: 210px;
