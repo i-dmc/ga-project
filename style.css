@@ -459,7 +459,7 @@ p {
     border-radius: 20px;
     height: 400px;
     width: 50%;
-    background-image: url("/Users/iva/ga-project/images/thumbnail_Screen Shot 2023-04-16 at 1.53.04 pm.jpg");
+    background-image: url("./images/thumbnail_Screen Shot 2023-04-16 at 1.53.04 pm.jpg");
     background-size: cover;
     filter: grayscale(80%);
     transition: filter 0.3s ease-in-out;
@@ -504,7 +504,7 @@ p {
     border-radius: 20px;
     height: 400px;
     width: 50%;
-    background-image: url("/Users/iva/ga-project/images/Screen Shot 2023-04-16 at 6.08.39 pm.jpeg");
+    background-image: url("./images/Screen Shot 2023-04-16 at 6.08.39 pm.jpeg");
     background-size: cover;
     filter: grayscale(80%);
     transition: filter 0.3s ease-in-out;
