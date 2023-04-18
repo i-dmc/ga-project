@@ -38,6 +38,12 @@ nav {
     align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 0 0 20px 0;
+    }
+}
+
 .top-nav {
     list-style: none;
     display: flex;
